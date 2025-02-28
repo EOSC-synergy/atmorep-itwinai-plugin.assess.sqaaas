@@ -1,0 +1,78 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.2.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/interTwin-eu/atmorep-itwinai-plugin:
+      branch: main
+      repo: https://github.com/interTwin-eu/atmorep-itwinai-plugin
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/interTwin-eu/atmorep-itwinai-plugin git:
+        commands:
+        - /usr/bin/env sh .sqa/script.wiggy-taupe-balinese.sh
+        container: qc.acc_pasty-olivine-caiman
+  QC.Doc:
+    repos:
+      github.com/interTwin-eu/atmorep-itwinai-plugin find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.homey-ochre-chinchilla.sh
+        container: qc.doc_fuzzy-cardinal-hyena
+      github.com/interTwin-eu/atmorep-itwinai-plugin git:
+        commands:
+        - /usr/bin/env sh .sqa/script.sickly-cream-flamingo.sh
+        container: qc.doc_hazy-magenta-quokka
+      github.com/interTwin-eu/atmorep-itwinai-plugin markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-fuchsia-hedgehog.sh
+        container: qc.doc_homey-brown-owl
+  QC.Lic:
+    repos:
+      github.com/interTwin-eu/atmorep-itwinai-plugin licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.squeaky-grey-coyote.sh
+        container: qc.lic_frumpy-charcoal-horse
+  QC.Met:
+    repos:
+      github.com/interTwin-eu/atmorep-itwinai-plugin cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-plum-frog.sh
+        container: qc.met_hazy-mustard-lynx
+  QC.Sec:
+    repos:
+      github.com/interTwin-eu/atmorep-itwinai-plugin bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.pasty-chartreuse-kiwi.sh
+        container: qc.sec_shaky-burgundy-avocet
+  QC.Sty:
+    repos:
+      github.com/interTwin-eu/atmorep-itwinai-plugin flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.tasty-cream-liger.sh
+        container: qc.sty_skimpy-cerise-octopus
+      github.com/interTwin-eu/atmorep-itwinai-plugin hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-russet-shark.sh
+        container: qc.sty_beady-bronze-markhor
+      github.com/interTwin-eu/atmorep-itwinai-plugin jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.silly-cream-duck.sh
+        container: qc.sty_jumpy-tomato-gibbon
+  QC.Uni:
+    repos:
+      github.com/interTwin-eu/atmorep-itwinai-plugin commands:
+        commands:
+        - /usr/bin/env sh .sqa/script.cranky-linen-heron.sh
+        container: qc.uni_surly-mauve-albatross
+  QC.Ver:
+    repos:
+      github.com/interTwin-eu/atmorep-itwinai-plugin get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.squeaky-linen-fossa.sh
+        container: qc.ver_jumpy-burgundy-seal
+timeout: 5400

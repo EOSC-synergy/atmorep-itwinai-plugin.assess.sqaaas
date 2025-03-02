@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/interTwin-eu/atmorep-itwinai-plugin &&
-    bandit -f json --quiet  --confidence-level high --severity-level high --recursive  .
+cd github.com/matbun/atmorep-itwinai-plugin &&
+    python -m venv .venv &&&&
+    source .venv/bin/activate &&&&
+    .venv/bin/pip install &&&&
+    .venv/bin/pytest -v tests/
 )

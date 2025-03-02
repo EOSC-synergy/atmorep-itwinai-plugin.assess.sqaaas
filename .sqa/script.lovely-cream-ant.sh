@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/interTwin-eu/atmorep-itwinai-plugin &&
-    hadolint Dockerfile --failure-threshold error
+cd github.com/matbun/atmorep-itwinai-plugin &&
+    git rev-parse --is-inside-work-tree 
 )

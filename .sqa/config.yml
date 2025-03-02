@@ -15,64 +15,64 @@ sqa_criteria:
     repos:
       github.com/interTwin-eu/atmorep-itwinai-plugin git:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-silver-octopus.sh
-        container: qc.acc_slaphappy-cinnabar-rabbit
+        - /usr/bin/env sh .sqa/script.snoopy-sepia-frog.sh
+        container: qc.acc_stealthy-indigo-okapi
   QC.Doc:
     repos:
       github.com/interTwin-eu/atmorep-itwinai-plugin find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-corn-sloth.sh
-        container: qc.doc_cranky-cinnamon-barracuda
+        - /usr/bin/env sh .sqa/script.flaky-olivine-kangaroo.sh
+        container: qc.doc_snoopy-flax-audemer
       github.com/interTwin-eu/atmorep-itwinai-plugin git:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-aqua-chimpanzee.sh
-        container: qc.doc_sleazy-tomato-ragdoll
+        - /usr/bin/env sh .sqa/script.thirsty-carmine-blue.sh
+        container: qc.doc_paltry-crimson-leopard
       github.com/interTwin-eu/atmorep-itwinai-plugin markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-olive-tapir.sh
-        container: qc.doc_queasy-salmon-moorhen
+        - /usr/bin/env sh .sqa/script.sickly-chartreuse-duck.sh
+        container: qc.doc_woozy-saffron-otter
   QC.Lic:
     repos:
       github.com/interTwin-eu/atmorep-itwinai-plugin licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-xanthic-quail.sh
-        container: qc.lic_stealthy-harlequin-malamute
+        - /usr/bin/env sh .sqa/script.dorky-eggplant-chameleon.sh
+        container: qc.lic_snappy-coral-serval
   QC.Met:
     repos:
       github.com/interTwin-eu/atmorep-itwinai-plugin cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-asparagus-ocelot.sh
-        container: qc.met_stealthy-rose-urchin
+        - /usr/bin/env sh .sqa/script.baggy-mauve-cassowary.sh
+        container: qc.met_zippy-persimmon-hyrax
   QC.Sec:
     repos:
       github.com/interTwin-eu/atmorep-itwinai-plugin bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-pumpkin-labradoodle.sh
-        container: qc.sec_boozy-ruby-dodo
+        - /usr/bin/env sh .sqa/script.sleepy-violet-quoll.sh
+        container: qc.sec_thirsty-cerise-catfish
   QC.Sty:
     repos:
       github.com/interTwin-eu/atmorep-itwinai-plugin flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-burgundy-llama.sh
-        container: qc.sty_gamy-tomato-hornet
+        - /usr/bin/env sh .sqa/script.cloudy-olive-ocelot.sh
+        container: qc.sty_boozy-amaranth-wasp
       github.com/interTwin-eu/atmorep-itwinai-plugin hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-lemon-squirt.sh
-        container: qc.sty_skinny-malachite-duck
+        - /usr/bin/env sh .sqa/script.freaky-russet-snail.sh
+        container: qc.sty_stealthy-tomato-dugong
       github.com/interTwin-eu/atmorep-itwinai-plugin jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-peach-bison.sh
-        container: qc.sty_smelly-grey-rottweiler
+        - /usr/bin/env sh .sqa/script.flaky-magenta-donkey.sh
+        container: qc.sty_trippy-tomato-orangutan
   QC.Uni:
     repos:
       github.com/interTwin-eu/atmorep-itwinai-plugin commands:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-mauve-vulture.sh
-        container: qc.uni_bluesy-cinnamon-bonobo
+        - /usr/bin/env sh .sqa/script.pokey-red-stingray.sh
+        container: qc.uni_sickly-taupe-robin
   QC.Ver:
     repos:
       github.com/interTwin-eu/atmorep-itwinai-plugin get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-gold-caterpillar.sh
-        container: qc.ver_bumpy-cerulean-spitz
+        - /usr/bin/env sh .sqa/script.randy-bronze-mastiff.sh
+        container: qc.ver_stealthy-cardinal-coati
 timeout: 5400
